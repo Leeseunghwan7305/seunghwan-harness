@@ -24,6 +24,7 @@ disable-model-invocation: true
 |---|---|
 | `feat` | 새 기능 추가 |
 | `fix` | 버그 수정 |
+| `hotfix` | 운영/배포된 코드의 급한 긴급 수정 (일반 `fix` 보다 시급) |
 | `refactor` | 동작은 그대로, 코드 구조만 개선 |
 | `docs` | 문서·README·주석만 변경 |
 | `test` | 테스트 추가·수정 |
