@@ -1,0 +1,14 @@
+{
+  "name": "seunghwan-marketplace",
+  "owner": {
+    "name": "seunghwan"
+  },
+  "description": "승환의 개인 플러그인 마켓플레이스",
+  "plugins": [
+    {
+      "name": "seunghwan-harness",
+      "source": "./",
+      "description": "Claude Code 플러그인의 네 부품을 최소 예제로 배우는 학습용 플러그인"
+    }
+  ]
+}

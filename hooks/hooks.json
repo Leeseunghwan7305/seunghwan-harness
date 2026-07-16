@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[seunghwan-harness] 플러그인 로드됨 — command / skill / agent / hook 4개 부품 대기중'"
+          }
+        ]
+      }
+    ]
+  }
+}

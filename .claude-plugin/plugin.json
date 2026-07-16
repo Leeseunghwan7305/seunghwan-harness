@@ -1,0 +1,7 @@
+{
+  "name": "seunghwan-harness",
+  "description": "Claude Code 플러그인의 네 부품(command/skill/agent/hook)을 최소 예제로 배우는 학습용 플러그인",
+  "author": {
+    "name": "seunghwan"
+  }
+}
