@@ -28,7 +28,7 @@ disable-model-invocation: true
 ```
 
 각 커밋 제목은 **Conventional Commits** 형식 `<type>: <한글 요약>`, 50자 이내, "왜" 중심.
-type 은 `feat`(새 기능) · `fix`(버그) · `hotfix`(긴급 수정) · `refactor`(구조 개선) · `docs`(문서) · `test` · `chore`(잡일) · `style` · `perf` 중 그 커밋 성격에 맞는 것으로. 필요하면 `feat(scope): ...` 처럼 스코프도.
+type 은 `feat`(새 기능) · `fix`(버그) · `hotfix`(긴급 수정) · `refactor`(구조 개선) · `docs`(문서) · `test` · `chore`(잡일) · `style` · `perf` 중 그 커밋 성격에 맞는 것으로. **스코프는 쓰지 마** — `feat(scope): ...` 금지, 항상 `feat: <내용>` 형식으로만.
 
 기능 단위로 나누면 커밋마다 type 이 자연스럽게 달라집니다 (예: 새 기능은 `feat`, 딸려온 리팩터는 `refactor`, 문서는 `docs`) — 그게 쪼개는 이유이기도 합니다.
 

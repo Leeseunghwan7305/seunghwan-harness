@@ -227,7 +227,7 @@ skill과의 차이가 여기입니다:
 | `/seunghwan-harness:pr` | 커밋·push·GitHub PR 생성까지. push/PR 전 확인, `main`/`master` 에선 새 브랜치부터 만들도록 보호 |
 
 커밋 메시지는 **Conventional Commits** 형식(`<type>: <요약>`)으로 만듭니다:
-`feat`(새 기능) · `fix`(버그) · `hotfix`(긴급 수정) · `refactor`(구조 개선) · `docs` · `test` · `chore` · `style` · `perf`. 스코프는 `feat(team): ...` 처럼.
+`feat`(새 기능) · `fix`(버그) · `hotfix`(긴급 수정) · `refactor`(구조 개선) · `docs` · `test` · `chore` · `style` · `perf`. **스코프는 쓰지 않습니다** — 항상 `feat: <내용>` 형식으로만 (`feat(team): ...` 같은 괄호 스코프 금지).
 
 ### 다중 에이전트 — 역할을 나눠 일 시키기
 
