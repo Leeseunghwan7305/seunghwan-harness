@@ -76,8 +76,12 @@ cat ~/.claude/seunghwan-harness/rejected.jsonl 2>/dev/null
 
 ```bash
 mkdir -p ~/.claude/seunghwan-harness
-echo '{"date":"'"$(date +%F)"'","cmd":"pingpong","task":"<작업 요약>","approach":"<기각된 접근>","reason":"<남은 막아야 함 또는 사유>","by":"pingpong-maxround"}' >> ~/.claude/seunghwan-harness/rejected.jsonl
+F=~/.claude/seunghwan-harness/rejected.jsonl
+echo '{"date":"'"$(date +%F)"'","cmd":"pingpong","task":"<작업 요약>","approach":"<기각된 접근>","reason":"<남은 막아야 함 또는 사유>","by":"pingpong-maxround"}' >> "$F"
+# 상한: 최근 200개만 유지(무한 누적·고인 항목 방지)
+tail -n 200 "$F" > "$F.tmp" && mv "$F.tmp" "$F"
 ```
 
 - **핑퐁 도중 고쳐진 "막아야 함"은 기록하지 마라** — 그건 해결된 거지 폐기가 아니다. **최종적으로 버려진 접근만** 남긴다.
 - `date` 는 `date +%F` 로 실제 날짜를. 값 안에 따옴표가 있으면 이스케이프해라.
+- 위 `tail -n 200` 이 상한이다 — 파일은 항상 최근 200개로 유지되어 무한정 커지지 않는다.
