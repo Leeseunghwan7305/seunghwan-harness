@@ -213,14 +213,15 @@ skill과의 차이가 여기입니다:
 
 전부 사람 전용(`disable-model-invocation: true`)이라 `/` 로 직접 불러야 돌고, 되돌리기 어려운 작업(커밋·push·PR)은 **실행 전에 반드시 확인**을 받습니다.
 
-### git 워크플로우 — 작업 → 점검 → 커밋 → PR
+### git 워크플로우 — 이슈 → 작업 → 점검 → 커밋 → PR
 
 ```
-작업 → /review → /commit-msg 또는 /split-commit → /pr
+/issue → 작업 → /review → /commit-msg 또는 /split-commit → /pr
 ```
 
 | 커맨드 | 하는 일 |
 |---|---|
+| `/seunghwan-harness:issue` | 변경·버그·할 일을 **GitHub 이슈로** 생성. 생성 전 확인, 유사 이슈 중복 체크. `gh` CLI 사용 |
 | `/seunghwan-harness:review` | 지금 고친 변경(working diff)을 `code-reviewer` 에이전트로 **커밋 전 셀프 점검**. `review staged` 로 staged만, 경로를 주면 그 파일만 |
 | `/seunghwan-harness:commit-msg` | staged된 변경을 보고 커밋 메시지 초안 작성. **커밋은 안 하고 초안만** |
 | `/seunghwan-harness:split-commit` | 이미 작업한 변경을 **기능 단위로 나눠** 여러 커밋으로. 계획을 먼저 보여주고 승인 후 커밋. push는 안 함 |
